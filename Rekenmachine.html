@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button {
+            color:red;
+        }
+    </style>
+
+    <script>
+        function Optellen() {
+            var Input1= document.getElementById("Input1").value;
+            var Input2= document.getElementById("Input2").value;
+            var Result= parseInt(Input1) + parseInt(Input2);
+
+            document.getElementById('antwoord').innerText=Result
+        }
+
+        function Vermenigvuldigen() {
+            var Input1= document.getElementById("Input1").value;
+            var Input2= document.getElementById("Input2").value;
+            var Result= parseInt(Input1) * parseInt(Input2);
+
+            document.getElementById('antwoord').innerText=Result
+        }
+
+        function Delen() {
+            var Input1= document.getElementById("Input1").value;
+            var Input2= document.getElementById("Input2").value;
+            var Result= parseInt(Input1) / parseInt(Input2);
+
+            document.getElementById('antwoord').innerText=Result
+        }
+
+        function Aftrekken() {
+            var Input1= document.getElementById("Input1").value;
+            var Input2= document.getElementById("Input2").value;
+            var Result= parseInt(Input1) - parseInt(Input2);
+
+            document.getElementById('antwoord').innerText=Result
+        }
+    </script>
+</head>
+<body>
+    <h1>Rekenmachine</h1>
+
+    <input id="Input1" type="number">
+    <input id="Input2" type="number">
+    <button type="button" onclick="Optellen()">Optellen</button>
+    <button type="button" onclick="Vermenigvuldigen()">Vermenigvuldigen</button>
+    <button type="button" onclick="Delen()">Delen</button>
+    <button type="button" onclick="Aftrekken()">Aftrekken</button>
+
+    <span>Het antwoord is:</span>
+    <span id="antwoord"></span>
+</body>
+</html>
